@@ -7,7 +7,6 @@ import NoteListMain from '../NoteListMain/NoteListMain'
 import NotePageMain from '../NotePageMain/NotePageMain'
 import AddFolder from '../AddFolder/AddFolder'
 import AddNote from '../AddNote/AddNote'
-import dummyStore from '../dummy-store'
 import config from '../config'
 
 import './App.css'
@@ -19,17 +18,32 @@ class App extends Component {
   };
 
   setNoteful = noteful => {
-    const note = noteful.notes.map((note) => (
-      note
-    ))
-    // console.log(note)
     this.setState({
-      notes: note,
+      notes: noteful.notes,
       folders: noteful.folders
     })
-    // console.log(this.state)
   }
-
+/***************************************************************************************************************************************************************************/
+  /*These three functions should update state and rerender
+  when they are passed to the addfolder and addnote routes as props.
+  I tried but couldnt get them to work so I removed them. 
+  Delete request is on Note.js, Post is on addfolder.js and addnote.js*/
+  handleDeleteNote = (noteToDelete) => {
+    this.setState({
+      notes: this.state.notes.filter(note => note.id !== noteToDelete)
+    })
+  }
+  handleAddNote = (newNote) => {
+    this.setState({
+     notes: [ ...this.state.notes, newNote ]
+    })
+  }
+  handleAddFolder = (newFolder) => {
+    this.setState({
+      folders: [ ...this.state.folders, newFolder ]
+     })
+  }
+/***************************************************************************************************************************************************************************/
   componentDidMount() {
       fetch(config.API_ENDPOINT, {
         method: 'GET',
@@ -47,17 +61,13 @@ class App extends Component {
         .then(this.setNoteful)
         .catch(error => this.setState({ error }))
     }
-
   renderNavRoutes() {
     const { notes, folders } = this.state
+console.log('nav', notes)
     return (
       <>
         {['/', '/folder/:folderId'].map(path =>
-          <Route
-            exact
-            key={path}
-            path={path}
-            render={routeProps =>
+          <Route exact key={path} path={path} render={routeProps =>
               <NoteListNav
                 folders={folders}
                 notes={notes}
@@ -68,18 +78,7 @@ class App extends Component {
         )}
         <Route
           path='/note/:noteId'
-          render={routeProps => {
-            const { noteId } = routeProps.match.params
-            const note = (notes, noteId) || {}
-            const folder = (folders, note.folderId)
-            console.log('noteId folder is:' + folder)
-            return (
-              <NotePageNav
-                {...routeProps}
-                folder={folder}
-              />
-            )
-          }}
+          component={NotePageNav}
         />
         <Route
           path='/add-folder'
@@ -95,6 +94,7 @@ class App extends Component {
 
   renderMainRoutes() {
     const { notes, folders } = this.state
+    console.log('route', notes)
     return (
       <>
         {['/', '/folder/:folderId'].map(path =>
@@ -104,28 +104,28 @@ class App extends Component {
             path={path}
             render={routeProps => {
               const { folderId } = routeProps.match.params
-              const notesForFolder = notes
-              // removed folderId in order to figure out why the name wasn't appearing
-              //folderId will still need to be passed, but the above code is undefined
-              console.log(folderId);
               return (
                 <NoteListMain
                   {...routeProps}
-                  notes={notesForFolder}
+/***************************************************************************************************************************************************************************/
+                  //this controls what gets viewed on the main page and what gets viewd when a folder is clicked.
+                  //there is something wrong with my logic here that I couldnt figure out
+                  notes={notes.filter(note=>note.folderid==folderId ? !folderId : note)}
+/***************************************************************************************************************************************************************************/
                 />
               )
             }}
           />
         )}
+        
         <Route
           path='/note/:noteId'
           render={routeProps => {
             const { noteId } = routeProps.match.params
-            const note = (notes, noteId)
             return (
               <NotePageMain
                 {...routeProps}
-                note={note}
+                note={notes.filter(note=>note.id==noteId)[0]}
               />
             )
           }}
@@ -141,6 +141,7 @@ class App extends Component {
               <AddNote
                 {...routeProps}
                 folders={folders}
+                handleAddNote = {this.handleAddNote}
               />
             )
           }}
@@ -153,7 +154,7 @@ class App extends Component {
     return (
       <div className='App'>
         <nav className='App__nav'>
-          {this.renderNavRoutes()}
+          {(this.state.notes.length) ? this.renderNavRoutes() : ''}
         </nav>
         <header className='App__header'>
           <h1>
@@ -163,9 +164,10 @@ class App extends Component {
           </h1>
         </header>
         <main className='App__main'>
-          {this.renderMainRoutes()}
+          {(this.state.notes.length) ? this.renderMainRoutes() : ''}
         </main>
       </div>
+
     )
   }
 }

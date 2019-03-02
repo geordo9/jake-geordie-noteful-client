@@ -6,6 +6,7 @@ import CircleButton from '../CircleButton/CircleButton'
 import './NoteListNav.css'
 
 export default function NoteListNav(props) {
+  console.log('props', props.folders, props.notes)
   return (
     <div className='NoteListNav'>
       <ul className='NoteListNav__list'>

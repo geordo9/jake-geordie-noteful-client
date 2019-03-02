@@ -1,18 +1,18 @@
-import React from 'react'
+import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Note from '../Note/Note'
 import CircleButton from '../CircleButton/CircleButton'
 import './NoteListMain.css'
 
-export default function NoteListMain(props) {
+export default class NoteListMain extends Component {
+
+  render(){
   return (
+  
     <section className='NoteListMain'>
       <ul>
-        {/* the folder/id route causes an error because of the ul above,
-        the console log below shows that we're not passing notes in. it's an empty array */}
-        {console.log(props)}
-        {props.notes.map(note =>
+        {this.props.notes.map(note =>
           <li key={note.id}>
             <Note
               id={note.id}
@@ -22,6 +22,7 @@ export default function NoteListMain(props) {
           </li>
         )}
       </ul>
+      
       <div className='NoteListMain__button-container'>
         <CircleButton
           tag={Link}
@@ -36,6 +37,7 @@ export default function NoteListMain(props) {
       </div>
     </section>
   )
+}
 }
 
 NoteListMain.defaultProps = {
