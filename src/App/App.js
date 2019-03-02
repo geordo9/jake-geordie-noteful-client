@@ -8,7 +8,8 @@ import NotePageMain from '../NotePageMain/NotePageMain'
 import AddFolder from '../AddFolder/AddFolder'
 import AddNote from '../AddNote/AddNote'
 import dummyStore from '../dummy-store'
-import { getNotesForFolder, findNote, findFolder } from '../notes-helpers'
+import config from '../config'
+
 import './App.css'
 
 class App extends Component {
@@ -17,10 +18,35 @@ class App extends Component {
     folders: [],
   };
 
-  componentDidMount() {
-    // fake date loading from API call
-    setTimeout(() => this.setState(dummyStore), 600)
+  setNoteful = noteful => {
+    const note = noteful.notes.map((note) => (
+      note
+    ))
+    // console.log(note)
+    this.setState({
+      notes: note,
+      folders: noteful.folders
+    })
+    console.log(this.state.notes)
   }
+
+  componentDidMount() {
+      fetch(config.API_ENDPOINT, {
+        method: 'GET',
+        headers: {
+          'content-type': 'application/json',
+          'Authorization': `Bearer ${config.API_KEY}`
+        }
+      })
+        .then(res => {
+          if (!res.ok) {
+            throw new Error(res.status)
+          }
+          return res.json()
+        })
+        .then(this.setNoteful)
+        .catch(error => this.setState({ error }))
+    }
 
   renderNavRoutes() {
     const { notes, folders } = this.state
@@ -44,8 +70,8 @@ class App extends Component {
           path='/note/:noteId'
           render={routeProps => {
             const { noteId } = routeProps.match.params
-            const note = findNote(notes, noteId) || {}
-            const folder = findFolder(folders, note.folderId)
+            const note = (notes, noteId) || {}
+            const folder = (folders, note.folderId)
             return (
               <NotePageNav
                 {...routeProps}
@@ -77,7 +103,7 @@ class App extends Component {
             path={path}
             render={routeProps => {
               const { folderId } = routeProps.match.params
-              const notesForFolder = getNotesForFolder(notes, folderId)
+              const notesForFolder = (notes, folderId)
               return (
                 <NoteListMain
                   {...routeProps}
@@ -91,7 +117,7 @@ class App extends Component {
           path='/note/:noteId'
           render={routeProps => {
             const { noteId } = routeProps.match.params
-            const note = findNote(notes, noteId)
+            const note = (notes, noteId)
             return (
               <NotePageMain
                 {...routeProps}

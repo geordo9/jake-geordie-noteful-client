@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import CircleButton from '../CircleButton/CircleButton'
-import { countNotesForFolder } from '../notes-helpers'
+
 import './NoteListNav.css'
 
 export default function NoteListNav(props) {
@@ -16,7 +16,7 @@ export default function NoteListNav(props) {
               to={`/folder/${folder.id}`}
             >
               <span className='NoteListNav__num-notes'>
-                {countNotesForFolder(props.notes, folder.id)}
+                {(props.notes, folder.id)}
               </span>
               {folder.name}
             </NavLink>
