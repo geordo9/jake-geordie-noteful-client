@@ -9,6 +9,9 @@ export default function NoteListMain(props) {
   return (
     <section className='NoteListMain'>
       <ul>
+        {/* the folder/id route causes an error because of the ul above,
+        the console log below shows that we're not passing notes in. it's an empty array */}
+        {console.log(props)}
         {props.notes.map(note =>
           <li key={note.id}>
             <Note

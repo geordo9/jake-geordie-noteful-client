@@ -27,7 +27,7 @@ class App extends Component {
       notes: note,
       folders: noteful.folders
     })
-    console.log(this.state.notes)
+    console.log(this.state)
   }
 
   componentDidMount() {

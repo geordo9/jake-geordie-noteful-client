@@ -11,14 +11,12 @@ export default function NoteListNav(props) {
       <ul className='NoteListNav__list'>
         {props.folders.map(folder =>
           <li key={folder.id}>
-            <NavLink
-              className='NoteListNav__folder-link'
-              to={`/folder/${folder.id}`}
-            >
+            <NavLink className='NoteListNav__folder-link' to={`/folder/${folder.id}`}>
+            {/* The link isn't working and casues an error in NoteListMain */}
               <span className='NoteListNav__num-notes'>
                 {(props.notes, folder.id)}
               </span>
-              {folder.name}
+              {folder.title}
             </NavLink>
           </li>
         )}
