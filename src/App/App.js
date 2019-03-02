@@ -27,7 +27,7 @@ class App extends Component {
       notes: note,
       folders: noteful.folders
     })
-    console.log(this.state)
+    // console.log(this.state)
   }
 
   componentDidMount() {
@@ -72,6 +72,7 @@ class App extends Component {
             const { noteId } = routeProps.match.params
             const note = (notes, noteId) || {}
             const folder = (folders, note.folderId)
+            console.log('noteId folder is:' + folder)
             return (
               <NotePageNav
                 {...routeProps}
@@ -103,7 +104,10 @@ class App extends Component {
             path={path}
             render={routeProps => {
               const { folderId } = routeProps.match.params
-              const notesForFolder = (notes, folderId)
+              const notesForFolder = notes
+              // removed folderId in order to figure out why the name wasn't appearing
+              //folderId will still need to be passed, but the above code is undefined
+              console.log(folderId);
               return (
                 <NoteListMain
                   {...routeProps}

@@ -9,6 +9,7 @@ export default function Note(props) {
     <div className='Note'>
       <h2 className='Note__title'>
         <Link to={`/note/${props.id}`}>
+          {/* similar to folders, clicking this link crashing the app */}
           {props.name}
         </Link>
       </h2>
