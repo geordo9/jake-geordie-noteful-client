@@ -18,6 +18,7 @@ export default class NoteListMain extends Component {
               id={note.id}
               name={note.title}
               modified={note.modified}
+              handleDeleteNote = {this.props.handleDeleteNote}
             />
           </li>
         )}

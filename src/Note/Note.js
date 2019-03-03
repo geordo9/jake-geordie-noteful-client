@@ -8,28 +8,22 @@ import config from '../config'
 
 export default class Note extends Component {
 
-
   handleDelete = (e) => {
-    e.preventDefault()
     fetch(`${config.API_ENDPOINT}note/${this.props.id}`,{ 
     method: 'DELETE',
     headers: {
-      'content-type': 'application/json',
       'Authorization': `Bearer ${config.API_KEY}`},
     })
     .then(res => {
       if (!res.ok) {
-        return Promise.reject(e)}
+        return Promise.reject()}
         else {
-        console.log('deleted')
-/***************************************************************************************************************************************************************************/
-          //need to pass in a function that will update state and one that navigates back to main page
-          //so that once remove is clicked, the item is no longer on screen
-/***************************************************************************************************************************************************************************/
+        this.props.history.push('/') //<---------------------- push is undefined for some reason------------------------------------------------
+        this.props.handleDeleteNote(this.props.id)
         }   
       })
     .catch(error => {
-      console.error({error})
+      console.log({error})
     })
   }
 
@@ -41,7 +35,7 @@ export default class Note extends Component {
             {this.props.name}
           </Link>
         </h2>
-        <button className='Note__delete' type='button' onClick={(e) => this.handleDelete(e)}>
+        <button className='Note__delete' type='button' onClick={() => this.handleDelete(this.props.id)}>
           <FontAwesomeIcon icon='trash-alt' />
           {' '}
           remove

@@ -29,19 +29,13 @@ export default class AddNote extends Component {
       return res.json()
     })
     .then(note => {
-/***************************************************************************************************************************************************************************/
-      //this is where I tried calling a function to update
-      //state on submit. I couldnt get it to respond properly
-      this.props.handleAddNote(newNote)
+      this.props.handleAddNote(note)
       this.props.history.push(`/note/${note.id}`)
-/***************************************************************************************************************************************************************************/
-      
     })
     .catch(error => {
       console.log({error})
     })
     
-    console.log(newNote)
   }
 
   render() {

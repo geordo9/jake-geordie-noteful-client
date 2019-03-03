@@ -24,11 +24,8 @@ handleAddFolder = (e) => {
     return res.json()
   })
   .then(folder => {
-/***************************************************************************************************************************************************************************/
-    //I couldnt get the prop to update the state and re-render the item
-    //without a page refresh.
+    this.props.handleAddFolder(folder)
     this.props.history.push(`/folder/${folder.id}`)
-/***************************************************************************************************************************************************************************/
   })
   .catch(error => {
     console.log({error})

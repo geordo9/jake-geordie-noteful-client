@@ -8,6 +8,7 @@ import NotePageMain from '../NotePageMain/NotePageMain'
 import AddFolder from '../AddFolder/AddFolder'
 import AddNote from '../AddNote/AddNote'
 import config from '../config'
+import Note from '../Note/Note'
 
 import './App.css'
 
@@ -23,11 +24,6 @@ class App extends Component {
       folders: noteful.folders
     })
   }
-/***************************************************************************************************************************************************************************/
-  /*These three functions should update state and rerender
-  when they are passed to the addfolder and addnote routes as props.
-  I tried but couldnt get them to work so I removed them. 
-  Delete request is on Note.js, Post is on addfolder.js and addnote.js*/
   handleDeleteNote = (noteToDelete) => {
     this.setState({
       notes: this.state.notes.filter(note => note.id !== noteToDelete)
@@ -43,7 +39,6 @@ class App extends Component {
       folders: [ ...this.state.folders, newFolder ]
      })
   }
-/***************************************************************************************************************************************************************************/
   componentDidMount() {
       fetch(config.API_ENDPOINT, {
         method: 'GET',
@@ -63,7 +58,6 @@ class App extends Component {
     }
   renderNavRoutes() {
     const { notes, folders } = this.state
-console.log('nav', notes)
     return (
       <>
         {['/', '/folder/:folderId'].map(path =>
@@ -83,6 +77,7 @@ console.log('nav', notes)
         <Route
           path='/add-folder'
           component={NotePageNav}
+          
         />
         <Route
           path='/add-note'
@@ -94,7 +89,6 @@ console.log('nav', notes)
 
   renderMainRoutes() {
     const { notes, folders } = this.state
-    console.log('route', notes)
     return (
       <>
         {['/', '/folder/:folderId'].map(path =>
@@ -107,6 +101,7 @@ console.log('nav', notes)
               return (
                 <NoteListMain
                   {...routeProps}
+                  handleDeleteNote = {this.handleDeleteNote}
 /***************************************************************************************************************************************************************************/
                   //this controls what gets viewed on the main page and what gets viewd when a folder is clicked.
                   //there is something wrong with my logic here that I couldnt figure out
@@ -126,13 +121,21 @@ console.log('nav', notes)
               <NotePageMain
                 {...routeProps}
                 note={notes.filter(note=>note.id==noteId)[0]}
+                handleDeleteNote = {this.handleDeleteNote}
               />
             )
           }}
         />
         <Route
           path='/add-folder'
-          component={AddFolder}
+          render={routeProps => {
+            return (
+              <AddFolder
+              {...routeProps}
+              handleAddFolder = {this.handleAddFolder}
+              />
+              )
+          }}
         />
         <Route
           path='/add-note'
@@ -154,7 +157,7 @@ console.log('nav', notes)
     return (
       <div className='App'>
         <nav className='App__nav'>
-          {(this.state.notes.length) ? this.renderNavRoutes() : ''}
+          { this.renderNavRoutes()}
         </nav>
         <header className='App__header'>
           <h1>
@@ -164,7 +167,7 @@ console.log('nav', notes)
           </h1>
         </header>
         <main className='App__main'>
-          {(this.state.notes.length) ? this.renderMainRoutes() : ''}
+          { this.renderMainRoutes()}
         </main>
       </div>
 

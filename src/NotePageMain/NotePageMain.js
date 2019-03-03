@@ -1,24 +1,26 @@
-import React from 'react'
+import React, { Component } from 'react';
 import Note from '../Note/Note'
 import './NotePageMain.css'
 
-export default function NotePageMain(props) {
+export default class NotePageMain extends Component {
+  render(){
   return (
 
     <section className='NotePageMain'>
       <Note
-        id={props.note.id}
-        name={props.note.title}
-        modified={props.note.modified}
-        content={props.note.content}
+        id={this.props.note.id}
+        name={this.props.note.title}
+        modified={this.props.note.modified}
+        content={this.props.note.content}
+        handleDeleteNote = {this.props.handleDeleteNote}
       />
       <div className='NotePageMain__content'>
-        {props.note.content.split(/\n \r|\n/).map((para, i) =>
+        {this.props.note.content.split(/\n \r|\n/).map((para, i) =>
           <p key={i}>{para}</p>
         )}
       </div>
     </section>
-  )
+  )}
 }
 
 NotePageMain.defaultProps = {
