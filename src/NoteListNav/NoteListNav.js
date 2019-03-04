@@ -1,4 +1,5 @@
 import React from 'react'
+import { countNotesForFolder } from '../helper'
 import { NavLink, Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import CircleButton from '../CircleButton/CircleButton'
@@ -12,9 +13,8 @@ export default function NoteListNav(props) {
         {props.folders.map(folder =>
           <li key={folder.id}>
             <NavLink className='NoteListNav__folder-link' to={`/folder/${folder.id}`}>
-            {/* The link isn't working and casues an error in NoteListMain */}
               <span className='NoteListNav__num-notes'>
-                {(props.notes, folder.id)}
+                {countNotesForFolder(props.notes, folder.id)}
               </span>
               {folder.title}
             </NavLink>

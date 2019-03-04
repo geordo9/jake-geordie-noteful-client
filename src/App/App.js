@@ -102,11 +102,7 @@ class App extends Component {
                 <NoteListMain
                   {...routeProps}
                   handleDeleteNote = {this.handleDeleteNote}
-/***************************************************************************************************************************************************************************/
-                  //this controls what gets viewed on the main page and what gets viewd when a folder is clicked.
-                  //there is something wrong with my logic here that I couldnt figure out
-                  notes={notes.filter(note=>note.folderid==folderId ? !folderId : note)}
-/***************************************************************************************************************************************************************************/
+                  notes={!folderId ? notes : notes.filter(note=>note.folderid==folderId)}
                 />
               )
             }}

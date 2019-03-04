@@ -18,7 +18,8 @@ export default class Note extends Component {
       if (!res.ok) {
         return Promise.reject()}
         else {
-        this.props.history.push('/') //<---------------------- push is undefined for some reason------------------------------------------------
+        console.log(this.props.history)
+        this.props.handleReturn(this.props.id)
         this.props.handleDeleteNote(this.props.id)
         }   
       })

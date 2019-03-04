@@ -6,8 +6,11 @@ import CircleButton from '../CircleButton/CircleButton'
 import './NoteListMain.css'
 
 export default class NoteListMain extends Component {
-
   render(){
+
+    const handleReturn = (note) => {
+      this.props.history.push('/')}
+
   return (
   
     <section className='NoteListMain'>
@@ -19,6 +22,7 @@ export default class NoteListMain extends Component {
               name={note.title}
               modified={note.modified}
               handleDeleteNote = {this.props.handleDeleteNote}
+              handleReturn = {handleReturn}
             />
           </li>
         )}
