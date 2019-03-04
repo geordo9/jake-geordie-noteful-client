@@ -1,7 +1,7 @@
 {
   "main.css": "/jake-geordie-noteful-client/static/css/main.081352b8.chunk.css",
-  "main.js": "/jake-geordie-noteful-client/static/js/main.72ad8fac.chunk.js",
-  "main.js.map": "/jake-geordie-noteful-client/static/js/main.72ad8fac.chunk.js.map",
+  "main.js": "/jake-geordie-noteful-client/static/js/main.d15e71ab.chunk.js",
+  "main.js.map": "/jake-geordie-noteful-client/static/js/main.d15e71ab.chunk.js.map",
   "static/css/1.9fcdbea2.chunk.css": "/jake-geordie-noteful-client/static/css/1.9fcdbea2.chunk.css",
   "static/js/1.e002039a.chunk.js": "/jake-geordie-noteful-client/static/js/1.e002039a.chunk.js",
   "static/js/1.e002039a.chunk.js.map": "/jake-geordie-noteful-client/static/js/1.e002039a.chunk.js.map",
@@ -11,6 +11,6 @@
   "static/css/main.081352b8.chunk.css.map": "/jake-geordie-noteful-client/static/css/main.081352b8.chunk.css.map",
   "static/css/1.9fcdbea2.chunk.css.map": "/jake-geordie-noteful-client/static/css/1.9fcdbea2.chunk.css.map",
   "index.html": "/jake-geordie-noteful-client/index.html",
-  "precache-manifest.925a92a854a39b88139a5893aa9f7d7a.js": "/jake-geordie-noteful-client/precache-manifest.925a92a854a39b88139a5893aa9f7d7a.js",
+  "precache-manifest.1b70cdcc10c82a8060f93df3fee5e198.js": "/jake-geordie-noteful-client/precache-manifest.1b70cdcc10c82a8060f93df3fee5e198.js",
   "service-worker.js": "/jake-geordie-noteful-client/service-worker.js"
 }
