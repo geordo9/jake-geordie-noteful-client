@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "a340f449aebbc5fb6536",
+    "revision": "93b0c74f4c597c073be7",
     "url": "/jake-geordie-noteful-client/static/css/main.081352b8.chunk.css"
   },
   {
-    "revision": "a340f449aebbc5fb6536",
-    "url": "/jake-geordie-noteful-client/static/js/main.a340f449.chunk.js"
+    "revision": "93b0c74f4c597c073be7",
+    "url": "/jake-geordie-noteful-client/static/js/main.93b0c74f.chunk.js"
   },
   {
     "revision": "e002039a9914f400a0d4",
@@ -44,16 +44,16 @@ self.__precacheManifest = [
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-900.19b7a0ad.woff2"
   },
   {
-    "revision": "6232f43d15b0e7a0bf0fe82e295bdd06",
-    "url": "/jake-geordie-noteful-client/static/media/roboto-latin-100italic.6232f43d.woff2"
+    "revision": "d704bb3d579b7d5e40880c75705c8a71",
+    "url": "/jake-geordie-noteful-client/static/media/roboto-latin-100italic.d704bb3d.woff"
   },
   {
     "revision": "e9dbbe8a693dd275c16d32feb101f1c1",
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-100.e9dbbe8a.woff"
   },
   {
-    "revision": "d704bb3d579b7d5e40880c75705c8a71",
-    "url": "/jake-geordie-noteful-client/static/media/roboto-latin-100italic.d704bb3d.woff"
+    "revision": "6232f43d15b0e7a0bf0fe82e295bdd06",
+    "url": "/jake-geordie-noteful-client/static/media/roboto-latin-100italic.6232f43d.woff2"
   },
   {
     "revision": "a1471d1d6431c893582a5f6a250db3f9",
@@ -68,16 +68,16 @@ self.__precacheManifest = [
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-300italic.210a7c78.woff"
   },
   {
-    "revision": "d8bcbe724fd6f4ba44d0ee6a2675890f",
-    "url": "/jake-geordie-noteful-client/static/media/roboto-latin-400italic.d8bcbe72.woff2"
-  },
-  {
     "revision": "bafb105baeb22d965c70fe52ba6b49d9",
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-400.bafb105b.woff"
   },
   {
     "revision": "9680d5a0c32d2fd084e07bbc4c8b2923",
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-400italic.9680d5a0.woff"
+  },
+  {
+    "revision": "d8bcbe724fd6f4ba44d0ee6a2675890f",
+    "url": "/jake-geordie-noteful-client/static/media/roboto-latin-400italic.d8bcbe72.woff2"
   },
   {
     "revision": "de8b7431b74642e830af4d4f4b513ec9",
@@ -116,7 +116,7 @@ self.__precacheManifest = [
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-900italic.bc833e72.woff"
   },
   {
-    "revision": "5e942ce89264d97f5e5f0d834bdd275b",
+    "revision": "acf2f67cf62d077d1fb0ae6c40258650",
     "url": "/jake-geordie-noteful-client/index.html"
   }
 ];
