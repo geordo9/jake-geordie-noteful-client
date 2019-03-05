@@ -60,7 +60,7 @@ class App extends Component {
     const { notes, folders } = this.state
     return (
       <>
-        {['/', '/folder/:folderId'].map(path =>
+        {['/jake-geordie-noteful-client', '/jake-geordie-noteful-client/folder/:folderId'].map(path =>
           <Route exact key={path} path={path} render={routeProps =>
               <NoteListNav
                 folders={folders}
@@ -71,16 +71,16 @@ class App extends Component {
           />
         )}
         <Route
-          path='/note/:noteId'
+          path = '/jake-geordie-noteful-client/note/:noteId'
           component={NotePageNav}
         />
         <Route
-          path='/add-folder'
+          path = '/jake-geordie-noteful-client/add-folder'
           component={NotePageNav}
           
         />
         <Route
-          path='/add-note'
+          path = '/jake-geordie-noteful-client/add-note'
           component={NotePageNav}
         />
       </>
@@ -91,7 +91,8 @@ class App extends Component {
     const { notes, folders } = this.state
     return (
       <>
-        {['/', '/folder/:folderId'].map(path =>
+        {
+          ['/jake-geordie-noteful-client', '/jake-geordie-noteful-client/folder/:folderId'].map(path =>
           <Route
             exact
             key={path}
@@ -110,7 +111,7 @@ class App extends Component {
         )}
         
         <Route
-          path='/note/:noteId'
+          path = '/jake-geordie-noteful-client/note/:noteId'
           render={routeProps => {
             const { noteId } = routeProps.match.params
             return (
@@ -123,7 +124,7 @@ class App extends Component {
           }}
         />
         <Route
-          path='/add-folder'
+          path = '/jake-geordie-noteful-client/add-folder'
           render={routeProps => {
             return (
               <AddFolder
@@ -134,7 +135,7 @@ class App extends Component {
           }}
         />
         <Route
-          path='/add-note'
+          path='/jake-geordie-noteful-client/add-note'
           render={routeProps => {
             return (
               <AddNote
@@ -157,7 +158,7 @@ class App extends Component {
         </nav>
         <header className='App__header'>
           <h1>
-            <Link to='/'>Noteful</Link>
+            <Link to = '/jake-geordie-noteful-client'> Noteful </Link>
             {' '}
             <FontAwesomeIcon icon='check-double' />
           </h1>

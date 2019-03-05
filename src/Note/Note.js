@@ -32,7 +32,7 @@ export default class Note extends Component {
     return (
       <div className='Note'>
         <h2 className='Note__title'>
-          <Link to={`/note/${this.props.id}`}>
+          < Link to = {`/jake-geordie-noteful-client/note/${this.props.id}`} >
             {this.props.name}
           </Link>
         </h2>

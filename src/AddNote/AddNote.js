@@ -30,7 +30,7 @@ export default class AddNote extends Component {
     })
     .then(note => {
       this.props.handleAddNote(note)
-      this.props.history.push(`/note/${note.id}`)
+      this.props.history.push(`/jake-geordie-noteful-client/note/${note.id}`)
     })
     .catch(error => {
       console.log({error})
