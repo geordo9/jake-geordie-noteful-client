@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "http://geordo9.github.io/jake-geordie-noteful-client/precache-manifest.c2eba9e8a7d46065febfb0df43069597.js"
+  "https://geordo9.github.io/jake-geordie-noteful-client/precache-manifest.5f992306e2104c55d7e6d1af1c22b969.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("http://geordo9.github.io/jake-geordie-noteful-client/index.html", {
+workbox.routing.registerNavigationRoute("https://geordo9.github.io/jake-geordie-noteful-client/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
