@@ -44,12 +44,12 @@ self.__precacheManifest = [
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-900.19b7a0ad.woff2"
   },
   {
-    "revision": "e9dbbe8a693dd275c16d32feb101f1c1",
-    "url": "/jake-geordie-noteful-client/static/media/roboto-latin-100.e9dbbe8a.woff"
-  },
-  {
     "revision": "6232f43d15b0e7a0bf0fe82e295bdd06",
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-100italic.6232f43d.woff2"
+  },
+  {
+    "revision": "e9dbbe8a693dd275c16d32feb101f1c1",
+    "url": "/jake-geordie-noteful-client/static/media/roboto-latin-100.e9dbbe8a.woff"
   },
   {
     "revision": "d704bb3d579b7d5e40880c75705c8a71",
@@ -68,12 +68,12 @@ self.__precacheManifest = [
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-300italic.210a7c78.woff"
   },
   {
-    "revision": "bafb105baeb22d965c70fe52ba6b49d9",
-    "url": "/jake-geordie-noteful-client/static/media/roboto-latin-400.bafb105b.woff"
-  },
-  {
     "revision": "d8bcbe724fd6f4ba44d0ee6a2675890f",
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-400italic.d8bcbe72.woff2"
+  },
+  {
+    "revision": "bafb105baeb22d965c70fe52ba6b49d9",
+    "url": "/jake-geordie-noteful-client/static/media/roboto-latin-400.bafb105b.woff"
   },
   {
     "revision": "9680d5a0c32d2fd084e07bbc4c8b2923",
@@ -104,16 +104,16 @@ self.__precacheManifest = [
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-700italic.846d1890.woff"
   },
   {
+    "revision": "8c2ade503b34e31430d6c98aa29a52a3",
+    "url": "/jake-geordie-noteful-client/static/media/roboto-latin-900.8c2ade50.woff"
+  },
+  {
     "revision": "7b770d6c53423deb1a8e49d3c9175184",
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-900italic.7b770d6c.woff2"
   },
   {
     "revision": "bc833e725c137257c2c42a789845d82f",
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-900italic.bc833e72.woff"
-  },
-  {
-    "revision": "8c2ade503b34e31430d6c98aa29a52a3",
-    "url": "/jake-geordie-noteful-client/static/media/roboto-latin-900.8c2ade50.woff"
   },
   {
     "revision": "5e942ce89264d97f5e5f0d834bdd275b",
