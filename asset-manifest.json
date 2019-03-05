@@ -1,16 +1,16 @@
 {
   "main.css": "http://geordo9.github.io/jake-geordie-noteful-client/static/css/main.081352b8.chunk.css",
-  "main.js": "http://geordo9.github.io/jake-geordie-noteful-client/static/js/main.d78debec.chunk.js",
-  "main.js.map": "http://geordo9.github.io/jake-geordie-noteful-client/static/js/main.d78debec.chunk.js.map",
+  "main.js": "http://geordo9.github.io/jake-geordie-noteful-client/static/js/main.1b6e5321.chunk.js",
+  "main.js.map": "http://geordo9.github.io/jake-geordie-noteful-client/static/js/main.1b6e5321.chunk.js.map",
   "static/css/1.96888eed.chunk.css": "http://geordo9.github.io/jake-geordie-noteful-client/static/css/1.96888eed.chunk.css",
   "static/js/1.9e0dcbc7.chunk.js": "http://geordo9.github.io/jake-geordie-noteful-client/static/js/1.9e0dcbc7.chunk.js",
   "static/js/1.9e0dcbc7.chunk.js.map": "http://geordo9.github.io/jake-geordie-noteful-client/static/js/1.9e0dcbc7.chunk.js.map",
   "runtime~main.js": "http://geordo9.github.io/jake-geordie-noteful-client/static/js/runtime~main.56b1c556.js",
   "runtime~main.js.map": "http://geordo9.github.io/jake-geordie-noteful-client/static/js/runtime~main.56b1c556.js.map",
-  "static/media/index.css": "http://geordo9.github.io/jake-geordie-noteful-client/static/media/roboto-latin-900italic.7b770d6c.woff2",
-  "static/css/1.96888eed.chunk.css.map": "http://geordo9.github.io/jake-geordie-noteful-client/static/css/1.96888eed.chunk.css.map",
+  "static/media/index.css": "http://geordo9.github.io/jake-geordie-noteful-client/static/media/roboto-latin-900italic.bc833e72.woff",
   "static/css/main.081352b8.chunk.css.map": "http://geordo9.github.io/jake-geordie-noteful-client/static/css/main.081352b8.chunk.css.map",
+  "static/css/1.96888eed.chunk.css.map": "http://geordo9.github.io/jake-geordie-noteful-client/static/css/1.96888eed.chunk.css.map",
   "index.html": "http://geordo9.github.io/jake-geordie-noteful-client/index.html",
-  "precache-manifest.13f3ab8b2ea4fffc9748c44c2efb6be3.js": "http://geordo9.github.io/jake-geordie-noteful-client/precache-manifest.13f3ab8b2ea4fffc9748c44c2efb6be3.js",
+  "precache-manifest.c2eba9e8a7d46065febfb0df43069597.js": "http://geordo9.github.io/jake-geordie-noteful-client/precache-manifest.c2eba9e8a7d46065febfb0df43069597.js",
   "service-worker.js": "http://geordo9.github.io/jake-geordie-noteful-client/service-worker.js"
 }

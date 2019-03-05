@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "http://geordo9.github.io/jake-geordie-noteful-client/precache-manifest.13f3ab8b2ea4fffc9748c44c2efb6be3.js"
+  "http://geordo9.github.io/jake-geordie-noteful-client/precache-manifest.c2eba9e8a7d46065febfb0df43069597.js"
 );
 
 workbox.clientsClaim();
