@@ -1,16 +1,16 @@
 {
   "main.css": "/jake-geordie-noteful-client/static/css/main.081352b8.chunk.css",
-  "main.js": "/jake-geordie-noteful-client/static/js/main.d15e71ab.chunk.js",
-  "main.js.map": "/jake-geordie-noteful-client/static/js/main.d15e71ab.chunk.js.map",
+  "main.js": "/jake-geordie-noteful-client/static/js/main.a340f449.chunk.js",
+  "main.js.map": "/jake-geordie-noteful-client/static/js/main.a340f449.chunk.js.map",
   "static/css/1.9fcdbea2.chunk.css": "/jake-geordie-noteful-client/static/css/1.9fcdbea2.chunk.css",
   "static/js/1.e002039a.chunk.js": "/jake-geordie-noteful-client/static/js/1.e002039a.chunk.js",
   "static/js/1.e002039a.chunk.js.map": "/jake-geordie-noteful-client/static/js/1.e002039a.chunk.js.map",
   "runtime~main.js": "/jake-geordie-noteful-client/static/js/runtime~main.bcf8cc8f.js",
   "runtime~main.js.map": "/jake-geordie-noteful-client/static/js/runtime~main.bcf8cc8f.js.map",
-  "static/media/index.css": "/jake-geordie-noteful-client/static/media/roboto-latin-900italic.bc833e72.woff",
+  "static/media/index.css": "/jake-geordie-noteful-client/static/media/roboto-latin-900.8c2ade50.woff",
   "static/css/main.081352b8.chunk.css.map": "/jake-geordie-noteful-client/static/css/main.081352b8.chunk.css.map",
   "static/css/1.9fcdbea2.chunk.css.map": "/jake-geordie-noteful-client/static/css/1.9fcdbea2.chunk.css.map",
   "index.html": "/jake-geordie-noteful-client/index.html",
-  "precache-manifest.8158f94bc3f59572b383f1eb855e35dd.js": "/jake-geordie-noteful-client/precache-manifest.8158f94bc3f59572b383f1eb855e35dd.js",
+  "precache-manifest.8668cc787f160be6c28202980f669eb8.js": "/jake-geordie-noteful-client/precache-manifest.8668cc787f160be6c28202980f669eb8.js",
   "service-worker.js": "/jake-geordie-noteful-client/service-worker.js"
 }
