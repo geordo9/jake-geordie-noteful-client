@@ -60,7 +60,7 @@ class App extends Component {
     const { notes, folders } = this.state
     return (
       <>
-        {['/jake-geordie-noteful-client', '/jake-geordie-noteful-client/folder/:folderId'].map(path =>
+        {['/', '/folder/:folderId'].map(path =>
           <Route exact key={path} path={path} render={routeProps =>
               <NoteListNav
                 folders={folders}
@@ -71,16 +71,16 @@ class App extends Component {
           />
         )}
         <Route
-          path = '/jake-geordie-noteful-client/note/:noteId'
+          path = '/note/:noteId'
           component={NotePageNav}
         />
         <Route
-          path = '/jake-geordie-noteful-client/add-folder'
+          path = '/add-folder'
           component={NotePageNav}
           
         />
         <Route
-          path = '/jake-geordie-noteful-client/add-note'
+          path = '/add-note'
           component={NotePageNav}
         />
       </>
@@ -92,7 +92,7 @@ class App extends Component {
     return (
       <>
         {
-          ['/jake-geordie-noteful-client', '/jake-geordie-noteful-client/folder/:folderId'].map(path =>
+          ['/', '/folder/:folderId'].map(path =>
           <Route
             exact
             key={path}
@@ -111,7 +111,7 @@ class App extends Component {
         )}
         
         <Route
-          path = '/jake-geordie-noteful-client/note/:noteId'
+          path = '/note/:noteId'
           render={routeProps => {
             const { noteId } = routeProps.match.params
             return (
@@ -124,7 +124,7 @@ class App extends Component {
           }}
         />
         <Route
-          path = '/jake-geordie-noteful-client/add-folder'
+          path = '/add-folder'
           render={routeProps => {
             return (
               <AddFolder
@@ -135,7 +135,7 @@ class App extends Component {
           }}
         />
         <Route
-          path='/jake-geordie-noteful-client/add-note'
+          path='/add-note'
           render={routeProps => {
             return (
               <AddNote
@@ -158,7 +158,7 @@ class App extends Component {
         </nav>
         <header className='App__header'>
           <h1>
-            <Link to = '/jake-geordie-noteful-client'> Noteful </Link>
+            <Link to = ''> Noteful </Link>
             {' '}
             <FontAwesomeIcon icon='check-double' />
           </h1>

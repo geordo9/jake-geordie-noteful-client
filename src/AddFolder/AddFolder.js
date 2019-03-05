@@ -25,7 +25,7 @@ handleAddFolder = (e) => {
   })
   .then(folder => {
     this.props.handleAddFolder(folder)
-    this.props.history.push(`/jake-geordie-noteful-client/folder/${folder.id}`)
+    this.props.history.push(`/folder/${folder.id}`)
   })
   .catch(error => {
     console.log({error})

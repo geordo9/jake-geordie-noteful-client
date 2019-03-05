@@ -6,7 +6,7 @@ export default class NotePageMain extends Component {
   render(){
 
     const handleReturn = (note) => {
-    this.props.history.push('/jake-geordie-noteful-client')
+    this.props.history.push('/')
     }
 
   return (

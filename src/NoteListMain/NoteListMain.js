@@ -9,7 +9,7 @@ export default class NoteListMain extends Component {
   render(){
 
     const handleReturn = (note) => {
-      this.props.history.push('/jake-geordie-noteful-client')
+      this.props.history.push('/')
       }
 
   return (
@@ -32,7 +32,7 @@ export default class NoteListMain extends Component {
       <div className='NoteListMain__button-container'>
         <CircleButton
           tag={Link}
-          to = '/jake-geordie-noteful-client/add-note'
+          to = '/add-note'
           type='button'
           className='NoteListMain__add-note-button'
         >
