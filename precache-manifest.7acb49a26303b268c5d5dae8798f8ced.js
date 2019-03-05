@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "913e4f799131559c9f37",
+    "revision": "3fb6b7b31472d5967a61",
     "url": "/jake-geordie-noteful-client/static/css/main.081352b8.chunk.css"
   },
   {
-    "revision": "913e4f799131559c9f37",
-    "url": "/jake-geordie-noteful-client/static/js/main.913e4f79.chunk.js"
+    "revision": "3fb6b7b31472d5967a61",
+    "url": "/jake-geordie-noteful-client/static/js/main.3fb6b7b3.chunk.js"
   },
   {
     "revision": "e002039a9914f400a0d4",
@@ -56,12 +56,12 @@ self.__precacheManifest = [
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-100italic.d704bb3d.woff"
   },
   {
-    "revision": "a1471d1d6431c893582a5f6a250db3f9",
-    "url": "/jake-geordie-noteful-client/static/media/roboto-latin-300.a1471d1d.woff"
-  },
-  {
     "revision": "d69924b98acd849cdeba9fbff3f88ea6",
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-300italic.d69924b9.woff2"
+  },
+  {
+    "revision": "a1471d1d6431c893582a5f6a250db3f9",
+    "url": "/jake-geordie-noteful-client/static/media/roboto-latin-300.a1471d1d.woff"
   },
   {
     "revision": "210a7c781f5a354a0e4985656ab456d9",
@@ -92,12 +92,12 @@ self.__precacheManifest = [
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-500italic.ffcc050b.woff"
   },
   {
-    "revision": "010c1aeee3c6d1cbb1d5761d80353823",
-    "url": "/jake-geordie-noteful-client/static/media/roboto-latin-700italic.010c1aee.woff2"
-  },
-  {
     "revision": "cf6613d1adf490972c557a8e318e0868",
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-700.cf6613d1.woff"
+  },
+  {
+    "revision": "010c1aeee3c6d1cbb1d5761d80353823",
+    "url": "/jake-geordie-noteful-client/static/media/roboto-latin-700italic.010c1aee.woff2"
   },
   {
     "revision": "846d1890aee87fde5d8ced8eba360c3a",
@@ -116,7 +116,7 @@ self.__precacheManifest = [
     "url": "/jake-geordie-noteful-client/static/media/roboto-latin-900italic.bc833e72.woff"
   },
   {
-    "revision": "1280ad3d7cf2064087a0a773f5d4d70a",
+    "revision": "386eb1c2ac742bc1466a75f3505d6124",
     "url": "/jake-geordie-noteful-client/index.html"
   }
 ];
